@@ -6,25 +6,24 @@ const content = document.getElementById('content');
 btn.addEventListener('click', () => {
   clickCount++;
 
-  if(clickCount <= maxClicks) {
+  if (clickCount <= maxClicks) {
     moveButtonRandomly();
   } else {
-    btn.style.display = 'none'; // hide button after clicks complete
-    content.classList.remove('hidden'); // reveal letter and photos
+    btn.style.display = 'none';
+    content.classList.remove('hidden');
   }
 });
 
 function moveButtonRandomly() {
-  const container = document.querySelector('.container');
-  const containerRect = container.getBoundingClientRect();
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
 
-  const maxX = containerRect.width - btn.offsetWidth;
-  const maxY = containerRect.height - btn.offsetHeight;
+  // Generate a random position within the viewport
+  const randomX = Math.floor(Math.random() * (windowWidth - btn.offsetWidth));
+  const randomY = Math.floor(Math.random() * (windowHeight - btn.offsetHeight));
 
-  const randomX = Math.floor(Math.random() * maxX);
-  const randomY = Math.floor(Math.random() * maxY);
-
-  btn.style.position = 'absolute';
+  // Move the button across the screen freely
+  btn.style.position = 'fixed';
   btn.style.left = `${randomX}px`;
   btn.style.top = `${randomY}px`;
 }
