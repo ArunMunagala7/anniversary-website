@@ -89,24 +89,28 @@ body {
     border-radius: 4px;
   }
   
+  /* Pulled inward from the corners */
   .top-left {
-    top: 10px;
-    left: 10px;
+    top: 40px;
+    left: 40px;
     transform: rotate(-8deg);
   }
+  
   .top-right {
-    top: 10px;
-    right: 10px;
+    top: 40px;
+    right: 40px;
     transform: rotate(8deg);
   }
+  
   .bottom-left {
-    bottom: 10px;
-    left: 10px;
+    bottom: 40px;
+    left: 40px;
     transform: rotate(6deg);
   }
+  
   .bottom-right {
-    bottom: 10px;
-    right: 10px;
+    bottom: 40px;
+    right: 40px;
     transform: rotate(-6deg);
   }
   
