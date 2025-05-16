@@ -1,47 +1,58 @@
+/* Background theme */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffeef2;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fffde7, #fff9c4);
     color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    min-height: 100vh;
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
   }
   
+  /* Main content container */
   .container {
     text-align: center;
     padding: 20px;
     max-width: 1000px;
     position: relative;
-    overflow-x: hidden;
+    background: rgba(255, 255, 240, 0.95);
+    margin: 80px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 215, 80, 0.5);
   }
   
+  /* Title */
   h1 {
     font-size: 2rem;
     margin-top: 40px;
   }
   
+  /* Button styling */
   button {
     padding: 10px 20px;
-    background-color: #ff69b4;
-    color: white;
+    background-color: #fdd835;
+    color: #333;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 1.2rem;
     margin-top: 20px;
     transition: all 0.3s ease;
+    font-weight: bold;
   }
   
   button:hover {
-    background-color: #ff4081;
+    background-color: #fbc02d;
   }
   
+  /* Hide content initially */
   .hidden {
     display: none;
   }
   
+  /* Message letter styling */
   .letter {
     font-size: 1.1rem;
     margin: 20px auto;
@@ -50,21 +61,25 @@ body {
     text-align: left;
   }
   
+  /* Card styling */
   .message-card {
-    position: relative;
     padding: 40px;
-    background-color: #fff0f5;
+    background-color: #fffdf5;
     border-radius: 10px;
     margin-top: 30px;
     margin-bottom: 60px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
   
+  /* Polaroid image corners */
   .polaroid {
-    position: absolute;
-    width: 100px;
+    position: fixed;
+    width: 120px;
     background: white;
     padding: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    border-radius: 6px;
   }
   
   .polaroid img {
@@ -75,26 +90,23 @@ body {
   }
   
   .top-left {
-    top: -50px;
-    left: -50px;
-    transform: rotate(-10deg);
+    top: 10px;
+    left: 10px;
+    transform: rotate(-8deg);
   }
-  
   .top-right {
-    top: -50px;
-    right: -50px;
-    transform: rotate(10deg);
+    top: 10px;
+    right: 10px;
+    transform: rotate(8deg);
   }
-  
   .bottom-left {
-    bottom: -50px;
-    left: -50px;
-    transform: rotate(7deg);
+    bottom: 10px;
+    left: 10px;
+    transform: rotate(6deg);
   }
-  
   .bottom-right {
-    bottom: -50px;
-    right: -50px;
-    transform: rotate(-7deg);
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(-6deg);
   }
   
