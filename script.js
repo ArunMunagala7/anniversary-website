@@ -1,0 +1,4 @@
+function reveal() {
+    document.getElementById('content').classList.remove('hidden');
+  }
+  
