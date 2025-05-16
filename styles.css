@@ -11,7 +11,7 @@ body {
     background-size: cover;
   }
   
-  /* Main content container */
+  /* Main container */
   .container {
     text-align: center;
     padding: 20px;
@@ -29,7 +29,7 @@ body {
     margin-top: 40px;
   }
   
-  /* Button styling */
+  /* Button */
   button {
     padding: 10px 20px;
     background-color: #fdd835;
@@ -47,21 +47,11 @@ body {
     background-color: #fbc02d;
   }
   
-  /* Hide content initially */
   .hidden {
     display: none;
   }
   
-  /* Message letter styling */
-  .letter {
-    font-size: 1.1rem;
-    margin: 20px auto;
-    line-height: 1.6;
-    max-width: 600px;
-    text-align: left;
-  }
-  
-  /* Card styling */
+  /* Letter block */
   .message-card {
     padding: 40px;
     background-color: #fffdf5;
@@ -71,7 +61,15 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
   
-  /* Polaroid image corners */
+  .letter {
+    font-size: 1.1rem;
+    margin: 20px auto;
+    line-height: 1.6;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  /* Polaroids */
   .polaroid {
     position: fixed;
     width: 120px;
@@ -89,7 +87,6 @@ body {
     border-radius: 4px;
   }
   
-  /* Pulled inward from the corners */
   .top-left {
     top: 40px;
     left: 40px;
@@ -112,5 +109,48 @@ body {
     bottom: 40px;
     right: 40px;
     transform: rotate(-6deg);
+  }
+  
+  /* Gallery Section */
+  #photo-gallery {
+    padding: 40px 20px;
+    background: #fffef5;
+  }
+  
+  #photo-gallery h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #ffb300;
+  }
+  
+  .gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .gallery-item {
+    max-width: 600px;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    background: white;
+    overflow: hidden;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .image-word {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff9c4;
+    color: #5d4037;
   }
   
