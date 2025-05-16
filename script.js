@@ -18,11 +18,19 @@ function moveButtonRandomly() {
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
 
-  // Generate a random position within the viewport
-  const randomX = Math.floor(Math.random() * (windowWidth - btn.offsetWidth));
-  const randomY = Math.floor(Math.random() * (windowHeight - btn.offsetHeight));
+  const buttonWidth = btn.offsetWidth;
+  const buttonHeight = btn.offsetHeight;
 
-  // Move the button across the screen freely
+  // Set safe margins to avoid edges on mobile screens
+  const safeMargin = 20; 
+
+  const maxX = windowWidth - buttonWidth - safeMargin;
+  const maxY = windowHeight - buttonHeight - safeMargin;
+
+  // Ensure button never moves off-screen
+  const randomX = Math.floor(Math.random() * (maxX - safeMargin) + safeMargin);
+  const randomY = Math.floor(Math.random() * (maxY - safeMargin) + safeMargin);
+
   btn.style.position = 'fixed';
   btn.style.left = `${randomX}px`;
   btn.style.top = `${randomY}px`;
